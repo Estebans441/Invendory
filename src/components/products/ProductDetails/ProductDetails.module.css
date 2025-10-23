@@ -1,0 +1,46 @@
+:root {
+	--border-radius: 12px;
+}
+
+.detailInner {
+	padding: 12px 20px;
+	margin-left: 35px;
+	background: var(--color-border);
+	border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.description {
+	margin-bottom: 8px;
+	color: var(--color-bg);
+}
+
+.infoGrid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.labelsWrap {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.labelPill {
+	background: var(--color-accent);
+	color: var(--color-primary);
+	border: 1px solid var(--color-primary);
+	border-radius: 9999px;
+	padding: 2px 8px;
+	font-size: 12px;
+}
+
+.infoLabel {
+	color: var(--color-bg);
+	font-size: 12px;
+}
+
+.infoValue {
+	font-weight: 600;
+}
+

@@ -1,5 +1,5 @@
 export interface Product {
-  ref: string; // unique product reference/identifier
+  ref: string;
   name: string;
   provider: string;
   quantity: number;
@@ -7,6 +7,7 @@ export interface Product {
   sellPrice: number;
   buyPrice: number;
   labels: string[];
+  extraFields?: Record<string, string>;
 }
 
 export type BasicProductInfo = Pick<Product, "ref" | "name" | "provider" | "quantity">;

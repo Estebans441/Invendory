@@ -1,0 +1,46 @@
+.wrapper {
+	overflow-x: auto;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.row {
+	border-bottom: 1px solid var(--color-border);
+}
+
+.expandCell {
+	width: 40px;
+}
+
+.toggle {
+	cursor: pointer;
+	background: none;
+	border: 1px solid var(--color-border);
+	border-radius: 4px;
+	padding: 2px;
+	width: 28px;
+	height: 28px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.chev {
+	display: inline-block;
+	transition: transform 0.15s ease;
+}
+
+.chev[data-open="true"] {
+	transform: rotate(90deg);
+}
+
+.refCell {
+	font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.qtyCell {
+	text-align: right;
+}

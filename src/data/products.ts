@@ -7,9 +7,13 @@ export const PRODUCTS: Product[] = [
     provider: "Acme Co.",
     quantity: 120,
     description: "Durable multi-purpose widget ideal for home and office use.",
-    sellPrice: 49.99,
-    buyPrice: 30.0,
+    sellPrice: 5000.0,
+    buyPrice: 3000.0,
     labels: ["bestseller", "hardware"],
+    extraFields: {
+      color: "red",
+      weight: "1.5kg",
+    },
   },
   {
     ref: "REF-002",
@@ -17,9 +21,13 @@ export const PRODUCTS: Product[] = [
     provider: "Globex",
     quantity: 45,
     description: "Professional-grade gadget with extended warranty included.",
-    sellPrice: 129.99,
-    buyPrice: 85.5,
+    sellPrice: 15000.0,
+    buyPrice: 8550.0,
     labels: ["electronics", "premium"],
+    extraFields: {
+      warrantyPeriod: "2 years",
+      powerSource: "battery",
+    },
   },
   {
     ref: "REF-003",
@@ -27,9 +35,13 @@ export const PRODUCTS: Product[] = [
     provider: "Initech Tools",
     quantity: 200,
     description: "Comprehensive 12-piece tool kit with ergonomic handles.",
-    sellPrice: 79.0,
-    buyPrice: 42.75,
+    sellPrice: 7900.0,
+    buyPrice: 4200.75,
     labels: ["tools", "bundle", "new"],
+    extraFields: {
+      pieces: "12",
+      caseMaterial: "plastic",
+    },
   },
   {
     ref: "REF-004",
@@ -37,8 +49,12 @@ export const PRODUCTS: Product[] = [
     provider: "Soylent Supplies",
     quantity: 350,
     description: "Reusable BPA-free bottle made from recycled materials.",
-    sellPrice: 19.95,
-    buyPrice: 7.5,
+    sellPrice: 1900.95,
+    buyPrice: 700.5,
     labels: ["eco", "accessory"],
+    extraFields: {
+      capacity: "750ml",
+      material: "recycled plastic",
+    },
   },
 ];
