@@ -10,6 +10,7 @@ import { menuItems } from "@/src/data/appConstants";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const imageWidth = 180;
 
   return (
     <header className={styles.header}>
@@ -18,25 +19,26 @@ export default function Header() {
           <Image
             src="/logo.svg"
             alt="Logo"
-            width={250}
-            height={250 / 4}
-            className={styles.logo}
+            width={imageWidth}
+            height={imageWidth / 4}
             priority
           />
         </div>
 
+        { /* Mobile menu button and navigation */ }
         <button
-          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          aria-label={open ? "Open menu" : "Close menu"}
           onClick={() => setOpen((s) => !s)}
-          className={styles.hamburger}
+          className={styles.menuButton}
         >
           {open ? <X /> : <MenuIcon />}
         </button>
 
-        <nav className={`${styles.mobileNav} ${open ? styles.open : ""}`}>
-          <ul className={styles.mobileList}>
+        { /* Mobile navigation options */ }
+        <nav className={`${styles.mobileMenuNav} ${open ? styles.open : ""}`}>
+          <ul className={styles.mobileMenuList}>
             {menuItems.map((item) => (
-              <li key={item.href} className={styles.mobileItem}>
+              <li key={item.href} className={styles.mobileMenuItem}>
                 <Link href={item.href} onClick={() => setOpen(false)}>
                   {item.label}
                 </Link>

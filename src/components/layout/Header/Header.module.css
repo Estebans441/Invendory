@@ -9,12 +9,6 @@
     margin-bottom: 20px;
 }
 
-.container .brand {
-    color: var(--color-bg);
-    font-size: 2rem;
-    font-weight: bold;
-}
-
 .container {
     display: flex;
     align-items: center;
@@ -22,11 +16,14 @@
     gap: 12px;
 }
 
-.logo {
-    max-height: 40px;
+.container .brand {
+    color: var(--color-bg);
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-.hamburger {
+/* Mobile menu styles */
+.menuButton {
     display: none;
     background: transparent;
     border: none;
@@ -35,45 +32,51 @@
     padding: 6px;
 }
 
-.mobileNav {
+@media (max-width: 640px) {
+    .menuButton {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: max-height 0.3s ease-in-out;
+    }
+}
+
+.mobileMenuNav {
     display: none;
 }
 
-.mobileNav.open {
+.mobileMenuNav.open {
     display: block;
     position: fixed;
-    top: 60px;
-    left: 0;
-    right: 0;
+    width: fit-content;
+    top: 70px;
+    right: 5px;
     background: rgba(35,57,91,0.95);
     z-index: 20;
-    padding: 16px 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.mobileList {
+.mobileMenuList {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    align-items: right;
 }
 
-.mobileItem a {
+.mobileMenuItem {
+    padding: 8px 50px;
+    font-weight: 600;
+    text-align: end;
+    border-bottom: 1px solid var(--color-bg);
+}
+
+.mobileMenuItem:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mobileMenuItem a {
     color: var(--color-bg);
     text-decoration: none;
-    font-weight: 600;
-}
-
-@media (max-width: 640px) {
-    .hamburger {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .container .brand {
-        font-size: 1.2rem;
-    }
 }
