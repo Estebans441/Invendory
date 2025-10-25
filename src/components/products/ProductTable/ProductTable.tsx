@@ -21,11 +21,10 @@ export default function ProductTable({ products }: Props) {
       <table className={styles.table}>
         <thead>
           <tr>
-            <th aria-label="Expand" />
             <th>REF</th>
             <th>Name</th>
             <th>Provider</th>
-            <th style={{ textAlign: "right" }}>Quantity</th>
+            <th>Quantity</th>
           </tr>
         </thead>
         {/* CONTENT */}
@@ -34,38 +33,23 @@ export default function ProductTable({ products }: Props) {
             const isOpen = !!expanded[product.ref];
             return (
               <React.Fragment key={product.ref}>
-                <tr className={styles.row}>
-                  <td className={styles.expandCell}>
-                    <button
-                      onClick={() => toggle(product.ref)}
-                      aria-expanded={isOpen}
-                      aria-controls={`row-${product.ref}-details`}
-                      title={isOpen ? "Collapse" : "Expand"}
-                      className={styles.toggle}
-                    >
-                      <span
-                        className={styles.chev}
-                        data-open={isOpen}
-                        aria-hidden="true"
-                      >
-                        ▶
-                      </span>
-                    </button>
-                  </td>
+                <tr className={styles.row} onClick={() => toggle(product.ref)}>
                   {/* PRODUCT INFO */}
-                  <td className={styles.refCell}>{product.ref}</td>
-                  <td className={styles.nameCell}>{product.name}</td>
-                  <td className={styles.providerCell}>{product.provider}</td>
-                  <td className={styles.qtyCell}>{product.quantity}</td>
+                  <td className={styles.cell} data-label="REF">{product.ref}</td>
+                  <td className={styles.cell} data-label="Name">{product.name}</td>
+                  <td className={styles.cell} data-label="Provider">{product.provider}</td>
+                  <td className={styles.cell} data-label="Quantity">{product.quantity}</td>
                 </tr>
                 {/* PRODUCT ADDITIONAL DETAILS */}
-                {isOpen && (
-                  <tr id={`row-${product.ref}-details`} className={styles.detailRow}>
-                    <td colSpan={5} className={styles.detailCell}>
+                <tr
+                  id={`row-${product.ref}-details`}
+                  className={`${styles.detailRow} ${isOpen ? styles.open : ""}`}>
+                  <td colSpan={4} className={styles.detailCell}>
+                    <div className={styles.detailContent} aria-hidden={!isOpen}>
                       <ProductDetails product={product} />
-                    </td>
-                  </tr>
-                )}
+                    </div>
+                  </td>
+                </tr>
               </React.Fragment>
             );
           })}

@@ -8,6 +8,12 @@
     padding: 40px 0;
 }
 
+@media (max-width: 640px) {
+    .menuContainer {
+        display: none;
+    }
+}
+
 ul.menuList {
     list-style: none;
     padding: 0;
@@ -33,7 +39,7 @@ li.menuItem:hover {
 }
 
 li.selectedMenuItem {
-    background-color: var(--color-accent);
+    background-color: var(--color-terciary);
     font-weight: bold;
     transform: scale(1.05);
 }

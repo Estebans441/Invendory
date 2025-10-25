@@ -1,6 +1,7 @@
 export interface Product {
   ref: string;
   name: string;
+  imageUrl?: string;
   provider: string;
   quantity: number;
   description: string;

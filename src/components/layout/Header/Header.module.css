@@ -14,3 +14,66 @@
     font-size: 2rem;
     font-weight: bold;
 }
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.logo {
+    max-height: 40px;
+}
+
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--color-bg);
+    cursor: pointer;
+    padding: 6px;
+}
+
+.mobileNav {
+    display: none;
+}
+
+.mobileNav.open {
+    display: block;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(35,57,91,0.95);
+    z-index: 20;
+    padding: 16px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.mobileList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mobileItem a {
+    color: var(--color-bg);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 640px) {
+    .hamburger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container .brand {
+        font-size: 1.2rem;
+    }
+}

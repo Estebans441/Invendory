@@ -3,7 +3,7 @@
     --color-border: #23395B;
     --color-secondary: #8ea8c388;
     --color-terciary: #FFBE0B;
-    --color-accent: #FFBE0B;
+    --color-terciary-light: #ffbe0b91;
     --color-bg: #f5f5f5;
     --color-muted: #a5a5a5;
     --color-black: #161925;
@@ -33,4 +33,18 @@ body {
     min-height: 0;
     padding: 25px 50px;
     overflow: auto;
+}
+
+
+@media (max-width: 640px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .main-content {
+        flex: 1 1 auto;
+        min-height: 0;
+        padding: 15px 15px;
+        overflow: auto;
+    }
 }

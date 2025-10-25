@@ -6,7 +6,7 @@ export const PRODUCTS: Product[] = [
     name: "Widget A",
     provider: "Acme Co.",
     quantity: 120,
-    description: "Durable multi-purpose widget ideal for home and office use.",
+    description: "",
     sellPrice: 5000.0,
     buyPrice: 3000.0,
     labels: ["bestseller", "hardware"],
