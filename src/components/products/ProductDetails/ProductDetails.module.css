@@ -1,28 +1,32 @@
 .detailContainer {
 	display: grid;
-	grid-template-columns: 160px 1fr;
-	gap: 16px;
+	grid-template-columns: 200px 1fr;
+	gap: var(--space-4);
 	align-items: start;
 	background: var(--color-muted);
-	padding: 12px 20px;
+	padding: var(--space-3) var(--space-5);
 	font-size: 15px;
 	color: var(--color-black);
+	margin: 0 0 var(--space-2) var(--space-5);
 }
 
-.description {
-	margin-bottom: 8px;
+.detailInner {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-4);
 }
 
 .infoGrid {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 12px;
 }
 
 .labelsWrap {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 6px;
+	gap: var(--space-1);
+	vertical-align: middle;
 }
 
 .labelPill {
@@ -32,6 +36,15 @@
 	border-radius: 9999px;
 	padding: 2px 8px;
 	font-size: 12px;
+}
+
+.colorBox {
+	width: 16px;
+	height: 16px;
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-lg);
+	margin: 0 1.5px;
+	translate: 0 3px;
 }
 
 .infoLabel {
@@ -44,8 +57,8 @@
 }
 
 .imageWrap {
-	width: 160px;
-	height: 160px;
+	width: 100%;
+	height: auto;
 	overflow: hidden;
 	display: flex;
 	align-items: center;
@@ -77,9 +90,11 @@
 @media (max-width: 640px) {
 	.detailContainer {
 		grid-template-columns: 1fr;
+		margin: var(--space-2);
+		margin-top: 0;
 	}
 	.imageWrap {
 		width: 100%;
-		height: 220px;
+		height: auto;
 	}
 }

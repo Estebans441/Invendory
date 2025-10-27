@@ -40,24 +40,40 @@ export default function ProductDetails({ product }: Props){
                 {product.description}
               </div>
             )}
-
+            {/* LABELS */}
+            <div className={styles.labelsWrap}>
+              <strong>Labels:</strong>
+              {(product.labels ?? []).map((l: string) => (
+                <span key={l} className={styles.labelPill}>
+                  {l}
+                </span>
+              ))}
+            </div>
+            { /* COLORS */}
+            { product.colors && (
+              <div className={styles.labelsWrap}>
+                <strong>Colors:</strong>
+                { product.colors.map((c: string) => (
+                  <span
+                    key={c}
+                    title={c}
+                    aria-label={`color-${c}`}
+                    className={styles.colorBox}
+                    style={{
+                      backgroundColor: c,
+                    }}
+                  />
+                ))}
+              </div>
+            )}
             {/* INFO GRID */}
             <div className={styles.infoGrid}>
               <Info label="Sell price" value={formatCurrency(product.sellPrice)} />
               <Info label="Buy price" value={formatCurrency(product.buyPrice)} />
               <Info label="Earnings" value={formatCurrency(earnings)} />
-              <Info
-                label="Labels"
-                value={
-                  <div className={styles.labelsWrap}>
-                    {(product.labels ?? []).map((l: string) => (
-                      <span key={l} className={styles.labelPill}>
-                        {l}
-                      </span>
-                    ))}
-                  </div>
-                }
-              />
+              {product.extraFields && Object.entries(product.extraFields).map(([key, value]) => (
+                <Info key={key} label={key} value={value} />
+              ))}
             </div>
           </div>
         </div>

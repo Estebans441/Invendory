@@ -5,6 +5,7 @@ export interface Product {
   provider: string;
   quantity: number;
   description: string;
+  colors?: string[];
   sellPrice: number;
   buyPrice: number;
   labels: string[];
