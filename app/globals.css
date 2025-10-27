@@ -91,7 +91,8 @@ body {
     flex: 1 1 auto;
     min-height: 0;
     padding: 25px 50px;
-    overflow: auto;
+    overflow-y: scroll;
+    height: calc(100vh - 60px);
 }
 
 @media (max-width: 640px) {
