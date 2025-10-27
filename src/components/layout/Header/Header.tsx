@@ -24,18 +24,23 @@ export default function Header() {
             priority
           />
         </div>
-
-        { /* Mobile menu button and navigation */ }
         <button
-          aria-label={open ? "Open menu" : "Close menu"}
+          type="button"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-nav"
           onClick={() => setOpen((s) => !s)}
           className={styles.menuButton}
         >
-          {open ? <X /> : <MenuIcon />}
+          {open ? <X aria-hidden /> : <MenuIcon aria-hidden />}
         </button>
 
-        { /* Mobile navigation options */ }
-        <nav className={`${styles.mobileMenuNav} ${open ? styles.open : ""}`}>
+        {/* Mobile navigation options */}
+        <nav
+          id="mobile-nav"
+          aria-label="Primary navigation"
+          className={`${styles.mobileMenuNav} ${open ? styles.open : ""}`}
+        >
           <ul className={styles.mobileMenuList}>
             {menuItems.map((item) => (
               <li key={item.href} className={styles.mobileMenuItem}>
