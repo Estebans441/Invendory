@@ -21,7 +21,7 @@ export default function RootLayout({
         </a>
         <Header />
         <div className="menu-layout">
-          <aside aria-label="Sidebar navigation">
+          <aside className="menuContainer" aria-label="Sidebar navigation">
             <Menu />
           </aside>
           <main id="main-content" className="main-content" role="main">

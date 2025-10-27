@@ -6,6 +6,7 @@
 :root {
     /* Colors */
     --color-primary: #23395B;
+    --color-primary-translucent: #23395b25;
     --color-border: #23395B;
     --color-secondary: #8ea8c388;
     --color-terciary: #FFBE0B;
@@ -68,6 +69,22 @@ body {
     flex-direction: row;
     flex: 1 1 auto;
     min-height: 0;
+}
+
+/* Menu styles */
+.menuContainer {
+    background-color: var(--color-secondary);
+    color: var(--color-black);
+    box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+    border-radius: 0 6px 6px 0;
+    width: 200px;
+    padding: var(--space-5) var(--space-3);
+}
+
+@media (max-width: 1000px) {
+    .menuContainer {
+        display: none;
+    }
 }
 
 .main-content {
