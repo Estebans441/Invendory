@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
+import Header from "@/src/components/layout/Header/Header";
 
 export const metadata: Metadata = {
   title: "Invendory",
@@ -12,10 +13,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <body>
-          <main>
-            {children}
-          </main>
-      </body>
+    <>
+      <Header />
+      <main>
+        <div className="flex h-screen w-full items-center justify-center p-6 md:p-10">
+          {children}
+        </div>
+      </main>
+    </>
   );
 }
