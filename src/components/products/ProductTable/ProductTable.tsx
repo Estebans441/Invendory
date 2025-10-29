@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Product } from "../../../types/product";
+import { Product } from "@/src/types/product";
 import styles from "./ProductTable.module.css";
 import ProductDetails from "../ProductDetails/ProductDetails";
 

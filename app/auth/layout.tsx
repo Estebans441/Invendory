@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/app/globals.css";
 
 export const metadata: Metadata = {
   title: "Invendory",
@@ -12,8 +12,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-        {children}
-    </html>
+      <body>
+          <main>
+            {children}
+          </main>
+      </body>
   );
 }

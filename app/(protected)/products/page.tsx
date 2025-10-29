@@ -1,5 +1,5 @@
-import ProductTable from "../../src/components/products/ProductTable/ProductTable";
-import { PRODUCTS } from "../../src/data/products";
+import ProductTable from "@/src/components/products/ProductTable/ProductTable";
+import { PRODUCTS } from "@/src/data/products";
 
 export default function ProductsPage() {
   return (
