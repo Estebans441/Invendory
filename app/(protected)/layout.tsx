@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
-import { HeaderAuth } from "@/src/components/layout/header/header1";
-import Menu from "@/src/components/layout/menu/menu1";
+import { HeaderAuth } from "@/src/components/layout/header/header";
+import Menu from "@/src/components/layout/menu/menu";
 
 export const metadata: Metadata = {
   title: "Invendory",
