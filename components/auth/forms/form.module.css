@@ -1,0 +1,26 @@
+.form {
+    transition: all 0.3s ease-in-out;
+}
+
+.formCard {
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 200px var(--color-terciary);
+}
+
+.formHeader {
+    color: var(--color-primary);
+}
+
+.formButton {
+    background-color: var(--color-primary);
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.formButton:hover {
+    background-color: var(--color-terciary);
+    color: var(--color-black);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    transition: all 0.2s ease-in-out;
+}

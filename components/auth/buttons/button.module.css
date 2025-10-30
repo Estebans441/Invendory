@@ -1,25 +1,25 @@
 .button {
     padding: 10px 20px;
-    background-color: var(--color-terciary);
-    color: var(--color-black);
+    background-color: var(--color-secondary);
+    color: var(--color-terciary);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .button:hover {
     background-color: var(--color-terciary);
     color: var(--color-black);
-    transform: scale(1.05);
-    transition: transform 0.2s ease;
+    transform: scale(1.03);
+    transition: all 0.2s ease;
 }
 
 .button:active {
     background-color: var(--color-terciary);
     color: var(--color-black);
     transform: scale(0.95);
-    transition: transform 0.1s ease;
+    transition: all 0.1s ease;
 }
 
