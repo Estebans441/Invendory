@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import styles from "./Menu.module.css";
+import styles from "./menu.module.css";
 import { usePathname } from "next/navigation";
 
 import { menuItems } from "@/src/data/appConstants";
