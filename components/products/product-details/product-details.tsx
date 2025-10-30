@@ -3,7 +3,7 @@
 import * as React from "react";
 import Image from "next/image";
 import { Product } from "../../../types/product";
-import { formatCurrency } from "../../../utils/format";
+import { formatCurrency } from "@/lib/utils";
 import styles from "./product-details.module.css";
 
 type Props = {

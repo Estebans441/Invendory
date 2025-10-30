@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button } from "@/src/components/ui/button";
-import { createClient } from "@/src/lib/supabase/server";
+import { Button } from "@/components/ui/button";
+import { createClient } from "@/lib/supabase/server";
 import { LogoutButton } from "./logout-button";
 import styles from "./button.module.css";
 

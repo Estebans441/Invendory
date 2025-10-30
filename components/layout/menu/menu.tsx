@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "./menu.module.css";
 import { usePathname } from "next/navigation";
 
-import { menuItems } from "@/src/data/appConstants";
+import { menuItems } from "@/data/appConstants";
 
 export default function Menu() {
   const pathname = usePathname() || "/";

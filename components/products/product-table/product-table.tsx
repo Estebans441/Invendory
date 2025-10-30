@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Product } from "@/src/types/product";
+import { Product } from "@/types/product";
 import styles from "./product-table.module.css";
 import ProductDetails from "../product-details/product-details";
 
@@ -51,11 +51,11 @@ export default function ProductTable({ products }: Props) {
                   aria-expanded={isOpen}
                   aria-controls={detailsId}
                 >
+                    <td className={styles.cell} data-label="REF">{product.ref}</td>
+                    <td className={styles.cell} data-label="Name">{product.name}</td>
+                    <td className={styles.cell} data-label="Provider">{product.provider}</td>
+                    <td className={styles.cell} data-label="Quantity">{product.quantity}</td>
                   {/* PRODUCT INFO */}
-                  <td className={styles.cell} data-label="REF">{product.ref}</td>
-                  <td className={styles.cell} data-label="Name">{product.name}</td>
-                  <td className={styles.cell} data-label="Provider">{product.provider}</td>
-                  <td className={styles.cell} data-label="Quantity">{product.quantity}</td>
                 </tr>
                 {/* PRODUCT ADDITIONAL DETAILS */}
                 <tr id={detailsId} className={`${styles.detailRow} ${isOpen ? styles.open : ""}`}>

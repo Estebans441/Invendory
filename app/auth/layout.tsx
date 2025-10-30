@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
-import { Header } from "@/src/components/layout/header/header";
+import { Header } from "@/components/layout/header/header";
 
 export const metadata: Metadata = {
   title: "Invendory",
