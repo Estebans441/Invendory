@@ -1,4 +1,4 @@
-import { HeaderAuth } from "@/src/components/layout/header/header";
+import { HeaderAuth } from "@/src/components/layout/header/header1";
 
 export default function Home() {
   return (
