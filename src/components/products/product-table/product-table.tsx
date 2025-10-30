@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import { Product } from "@/src/types/product";
-import styles from "./ProductTable.module.css";
-import ProductDetails from "../ProductDetails/ProductDetails";
+import styles from "./product-table.module.css";
+import ProductDetails from "../product-details/product-details";
 
 type Props = {
   products: Product[];

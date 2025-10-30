@@ -1,4 +1,4 @@
-import ProductTable from "@/src/components/products/ProductTable/ProductTable";
+import ProductTable from "@/src/components/products/product-table/product-table";
 import { PRODUCTS } from "@/src/data/products";
 
 export default function ProductsPage() {

@@ -4,7 +4,7 @@ import * as React from "react";
 import Image from "next/image";
 import { Product } from "../../../types/product";
 import { formatCurrency } from "../../../utils/format";
-import styles from "./ProductDetails.module.css";
+import styles from "./product-details.module.css";
 
 type Props = {
   product: Product;
