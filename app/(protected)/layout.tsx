@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
-import Header from "@/src/components/layout/header/header";
+import { HeaderAuth } from "@/src/components/layout/header/header";
 import Menu from "@/src/components/layout/menu/menu";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function RootLayout({
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-white focus:text-black focus:px-3 focus:py-2 focus:rounded">
           Skip to main content
         </a>
-        <Header />
+        <HeaderAuth />
         <div className="menu-layout">
           <aside className="menu-container" aria-label="Sidebar navigation">
             <Menu />
