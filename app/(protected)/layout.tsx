@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
-import Header from "@/src/components/layout/Header/Header";
-import Menu from "@/src/components/layout/Menu/Menu";
+import Header from "@/src/components/layout/header/header";
+import Menu from "@/src/components/layout/menu/menu";
 
 export const metadata: Metadata = {
   title: "Invendory",
@@ -20,7 +20,7 @@ export default function RootLayout({
         </a>
         <Header />
         <div className="menu-layout">
-          <aside className="menuContainer" aria-label="Sidebar navigation">
+          <aside className="menu-container" aria-label="Sidebar navigation">
             <Menu />
           </aside>
           <main id="main-content" className="main-content" role="main">
